@@ -41,15 +41,18 @@
       />
       <br />
 
-      <label for="level">Wybierz gęstość: </label><br />
+      <label for="level">Korekcja błędów: </label>
+      <br />
       <input
         type="range"
         class="level"
         id="level"
-        [(ngModel)]="level"
+        [(ngModel)]="selectedLevel"
         min="1"
         max="4"
+        (change)="getNewLevel()"
       />
+
     </div>
     <div class="qrcodepreview" #imgqr>
       <ngx-qrcode
